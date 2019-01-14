@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>
+    layout-css布局篇之flex布局 |
+    
+    小米</title>
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/blog/css/style.css">
+  
+    <link rel="stylesheet" href="/blog/fancybox/jquery.fancybox.min.css">
+  
+  <script src="/blog/js/pace.min.js"></script>
+</head>
+</html>
+<body>
+<main class="content">
+  <section class="outer">
+  <article id="post-layout" class="article article-type-post" itemscope="" itemprop="blogPost">
+
+	<div class="article-inner">
+		
+		<header class="article-header">
+			
+  
+    <h1 class="article-title" itemprop="name">
+      layout-css布局篇之flex布局
+    </h1>
+  
+
+		</header>
+		
+
+		
+		<div class="article-meta">
+			<a href="/blog/2019/01/14/layout/" class="article-date">
+  <time datetime="2019-01-14T03:42:25.000Z" itemprop="datePublished">2019-01-14</time>
+</a>
+			
+		</div>
+		
+
+		<div class="article-entry" itemprop="articleBody">
+			
+			
+			
+			<h4 id="布局是css的重点之一，提高代码的重用性，提高你的工作效率。"><a href="#布局是css的重点之一，提高代码的重用性，提高你的工作效率。" class="headerlink" title="布局是css的重点之一，提高代码的重用性，提高你的工作效率。"></a>布局是css的重点之一，提高代码的重用性，提高你的工作效率。</h4><a id="more"></a>
+<font>概念:flex布局：英文全称Flexible Box,就是弹性布局的意思。采用Flex布局的元素，称为Flex容器（flex container），简称”容器”。它的所有子元素自动成为容器成员，称为Flex项目（flex item），简称”项目”。</font>
+
+
+<p>一、作用在容器上的属性（我这里只列举我们工作中经常用到的。）</p>
+<pre><code>1、flex-direction：决定主轴的方向 ，值有 row row-reverse column column-reverse
+
+    row:水平 正序排列
+
+    row-reverse:水平 倒序排列
+
+    column:纵向 正序排列
+
+    column-reverse:纵向 倒序排列
+</code></pre><p><img src="http://www.runoob.com/wp-content/uploads/2015/07/0cbe5f8268121114e87d0546e53cda6e.png" alt="blockchain" title="区块链"></p>
+<pre><code>2、flex-warp：决定项目成员怎么换行。 nowrap  wrap  wrap-reverse
+
+   nowrap：不换行 默认的
+</code></pre><p><img src="http://www.runoob.com/wp-content/uploads/2015/07/9da1f23965756568b4c6ea7124db7b9a.png" alt="blockchain" title="区块链"></p>
+<pre><code>wrap：换行，第一行在上方。
+</code></pre><p><img src="http://www.runoob.com/wp-content/uploads/2015/07/3c6b3c8b8fe5e26bca6fb57538cf72d9.jpg" alt="blockchain" title="区块链"></p>
+<pre><code>wrap-reverse：换行，第一行在下方。
+</code></pre><p><img src="http://www.runoob.com/wp-content/uploads/2015/07/fb4cf2bab8b6b744b64f6d7a99cd577c.jpg" alt="blockchain" title="区块链"></p>
+<pre><code>3、justify-content:决定了项目成员的对齐方式 flex-start | flex-end | center | space-between | space-around;
+</code></pre><p><img src="http://www.runoob.com/wp-content/uploads/2015/07/c55dfe8e3422458b50e985552ef13ba5.png" alt="blockchain" title="区块链"></p>
+<pre><code>4、align-items:项目在交叉轴上如何对齐 flex-start | flex-end | center | baseline | stretch;
+</code></pre><p><img src="http://www.runoob.com/wp-content/uploads/2015/07/2b0c39c7e7a80d5a784c8c2ca63cde17.png" alt="blockchain" title="区块链">    </p>
+<pre><code>5、align-content:多根轴线的对齐方式。 align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+</code></pre><p><img src="http://www.runoob.com/wp-content/uploads/2015/07/f10918ccb8a13247c9d47715a2bd2c33.png" alt="blockchain" title="区块链">    </p>
+<p>二、封装代码：命名一个class名字，放在一个公用文件夹，用的时候可以直接调用。</p>
+<pre><code>垂直居中：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">display: flex;</span><br><span class="line">   justify-content: center;</span><br><span class="line">   align-items: center;</span><br></pre></td></tr></table></figure>
+
+水平居中：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">display: flex;</span><br><span class="line">justify-content: center;</span><br></pre></td></tr></table></figure>
+</code></pre>
+			
+		</div>
+		<footer class="article-footer">
+			<a data-url="https://mwm0522.github.io/blog/2019/01/14/layout/" data-id="cjqvsajh80003cwisxkoieprg" class="article-share-link">
+				分享
+			</a>
+			
+		</footer>
+
+	</div>
+
+	
+	
+  <nav class="article-nav">
+    
+    
+      <a href="/blog/2019/01/08/markDown/" class="article-nav-link">
+        <strong class="article-nav-caption">后一篇</strong>
+        <div class="article-nav-title">markdown入门语法</div>
+      </a>
+    
+  </nav>
+
+
+	
+
+	
+	
+  <div class="gitalk" id="gitalk-container"></div>
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+  <script type="text/javascript">
+      var gitalk = new Gitalk({
+        clientID: 'cd02b9326f9b90293627',
+        clientSecret: '8ff3d57e2fd26e9c1b9235aa0925e3e3a5363335',
+        repo: 'blog',
+        owner: 'mwm0522',
+        admin: ['mwm0522'],
+        // id: location.pathname,      // Ensure uniqueness and length less than 50
+        id: md5(location.pathname),
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+  gitalk.render('gitalk-container')
+  </script>
+
+	
+
+</article>
+</section>
+  <footer class="footer">
+  
+  <div class="outer">
+    <ul class="list-inline">
+      <li>&copy; 2019 小米</li>
+      <li>Powered by <a>越努力越幸运</a></li>
+      <li>Theme  <a href="https://github.com/mwm0522/blog">小米</a></li>
+      <li>掘金  <a href="https://juejin.im/user/5845d8d7128fe1005783135d">小米</a></li>
+      <!--
+      <li><a href="/">Jimmy mi</a></li>
+      -->
+    </ul>
+  </div>
+</footer>
+</main>
+<aside class="sidebar">
+  <button class="navbar-toggle"></button>
+
+<nav class="navbar">
+  
+    <div class="logo">
+      <a href="/blog/"><img src="/blog/images/shark.svg" alt="小米"></a>
+    </div>
+  
+  <ul class="nav nav-main">
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/blog/">主页</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/blog/archives">归档</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/blog/Photo">相册</a>
+      </li>
+    
+      <li class="nav-item">
+        <a class="nav-item-link" href="/blog/About">关于</a>
+      </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link nav-item-search" title="Search">
+        <i class="fe fe-search"></i>
+        搜索
+      </a>
+    </li>
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+    </li>
+  </ul>
+</nav>
+
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+</aside>
+<script src="/blog/js/jquery-2.0.3.min.js"></script>
+<script src="/blog/js/lazyload.min.js"></script>
+
+  <script src="/blog/js/search.js"></script>
+
+
+<script src="/blog/js/ocean.js"></script>
+
+</body>
+</html>
